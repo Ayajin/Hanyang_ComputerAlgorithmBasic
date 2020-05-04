@@ -1,5 +1,5 @@
-#ifndef Heap_H
-#define Heap_H
+#ifndef _Heap_H_
+#define _Heap_H_
 
 #define TRUE 1
 #define FALSE 0

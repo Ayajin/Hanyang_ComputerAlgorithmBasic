@@ -4,6 +4,7 @@
 #include "Heap.h"
 #include "Queue.h"
 
+#define MAX_NUM 10000
 
 int MaxRule(int a, int b)
 {
@@ -26,12 +27,12 @@ int MinRule(int a, int b)
 int main()
 {
     FILE *fp;
-    int numOfArray, check, count = 1;
-    char temp[100];
     char* tok;
+    char temp[100];
+    int numOfArray, check, count = 1;
     int result[10000];
 
-    /************** Read Input File & Copy to Array **************/
+    // Read Input File & Copy to Array
     fp = fopen("input1-2.txt", "rt");
     if(fp == NULL)
     {
@@ -62,7 +63,7 @@ int main()
     }
 
     fclose(fp);
-    /************** Read Input File & Copy to Array **************/
+    
     
     Heap heap;
     HeapInit(&heap, MinRule);

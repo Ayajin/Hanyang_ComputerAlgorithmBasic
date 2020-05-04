@@ -17,6 +17,7 @@ int GetRChildIdx(int idx)
 
 int GetHighPriorityChildIdx(Heap *Heap, int idx)
 {
+    //arr[idx] has no child
     if(Heap->numOfData < GetLChildIdx(idx))
         return 0;
 
@@ -64,12 +65,11 @@ int Heapify(Heap *Heap, int idx)
     Heap->heapArr[idx] = Heap->heapArr[highPriorityNode];
     Heap->heapArr[highPriorityNode] = temp;
 
-    /**********For solve 1-2 by check original array**********/
+    //For solve 1-2 by check original array
     int checkTemp = Heap->CheckArr[idx];
     Heap->CheckArr[idx] = Heap->CheckArr[highPriorityNode];
     Heap->CheckArr[highPriorityNode] = checkTemp;
-    /**********For solve 1-2 by check original array**********/
-
+    
     Heapify(Heap, highPriorityNode);
 }
 
@@ -83,6 +83,5 @@ int BuildHeap(Heap *Heap)
     for(i; i > 0; i--)
         check = Heapify(Heap, i);
     
-
     return check;
 }

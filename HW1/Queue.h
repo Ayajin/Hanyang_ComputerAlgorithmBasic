@@ -1,5 +1,5 @@
-#ifndef Queue_H
-#define Queue_H
+#ifndef _Queue_H_
+#define _Queue_H_
 
 #define TRUE 1
 #define FALSE 0

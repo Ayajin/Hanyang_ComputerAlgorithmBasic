@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "Heap.h"
 
-
 int MaxRule(int a, int b)
 {
     //For MaxHeap
